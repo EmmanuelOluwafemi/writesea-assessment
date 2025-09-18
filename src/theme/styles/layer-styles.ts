@@ -26,4 +26,7 @@ export const layerStyles = {
       backdropFilter: "blur(4px)",
     },
   },
+  greenFadeBg: {
+    bg: "gradients.greenFade",
+  },
 };

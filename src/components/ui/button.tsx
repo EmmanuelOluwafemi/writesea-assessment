@@ -5,7 +5,7 @@ import type { ReactNode } from "react"
 interface ButtonProps {
   children: ReactNode
   size?: "sm" | "md" | "lg"
-  variant?: "solid" | "outline" | "ghost"
+  variant?: "solid" | "outline" | "ghost" | "blueOutline"
   leftIcon?: ReactNode
   rightIcon?: ReactNode
 }

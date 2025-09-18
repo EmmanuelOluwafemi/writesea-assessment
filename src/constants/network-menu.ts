@@ -8,31 +8,31 @@ export const networkMenu = [
         items: [
             {
                 title: "Personal Details",
-                link: "/dashboard/linkedin-analyzer/personal-details"
+                link: "/linkedin-analyzer/personal-details"
             },
             {
                 title: "Profile Section",
-                link: "/dashboard/linkedin-analyzer/profile-section"
+                link: "/linkedin-analyzer/profile-section"
             },
             {
                 title: "Work Experience",
-                link: "/dashboard/linkedin-analyzer/work-experience"
+                link: "/linkedin-analyzer/work-experience"
             },
             {
                 title: "Skills",
-                link: "/dashboard/linkedin-analyzer/skills"
+                link: "/linkedin-analyzer/skills"
             },
             {
                 title: "Recommendations",
-                link: "/dashboard/linkedin-analyzer/recommendations"
+                link: "/linkedin-analyzer/recommendations"
             },
             {
                 title: "Education",
-                link: "/dashboard/linkedin-analyzer/education"
+                link: "/linkedin-analyzer/education"
             },
             {
                 title: "Networking",
-                link: "/dashboard/linkedin-analyzer/networking"
+                link: "/linkedin-analyzer/networking"
             },
         ]
     },
@@ -42,15 +42,15 @@ export const networkMenu = [
         items: [
             {
                 title: "Certifications",
-                link: "/dashboard/linkedin-analyzer/certifications"
+                link: "/linkedin-analyzer/certifications"
             },
             {
                 title: "Projects",
-                link: "/dashboard/linkedin-analyzer/projects"
+                link: "/linkedin-analyzer/projects"
             },
             {
                 title: "Volunteer Experience",
-                link: "/dashboard/linkedin-analyzer/volunteer-experience"
+                link: "/linkedin-analyzer/volunteer-experience"
             }
         ]
     },

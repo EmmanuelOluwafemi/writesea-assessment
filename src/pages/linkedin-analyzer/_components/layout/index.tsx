@@ -1,5 +1,5 @@
 import { DashboardHeader } from "@/components/layout/dashboard-header"
-import { Box, HStack } from "@chakra-ui/react"
+import { Box, HStack, VStack } from "@chakra-ui/react"
 import { Outlet } from "react-router"
 import { OverviewMenu } from "./overview-menu"
 
@@ -12,9 +12,9 @@ export const AnalyzerWrapper = () => {
             {/* Side menu */}
             <OverviewMenu />
 
-            <Box h="full" overflowY="auto">
+            <VStack alignItems="center" h="full" w="full" overflowY="auto">
                 <Outlet />
-            </Box>
+            </VStack>
         </HStack>
     </Box>
   )
