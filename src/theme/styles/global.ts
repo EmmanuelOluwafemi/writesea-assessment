@@ -2,8 +2,8 @@
 export const globalCss = {
   body: {
     fontFamily: "body",
-    bg: "bg.canvas",
-    color: "text.primary",
+    bg: "white",
+    color: "black",
     lineHeight: "normal",
   },
   "*::placeholder": {
