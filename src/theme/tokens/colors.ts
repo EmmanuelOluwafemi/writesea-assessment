@@ -7,6 +7,7 @@ export const colors = {
     700: { value: "#563BDB" },
   },
   gray: {
+    40: { value: "#999BA0" },
     50: { value: "#F6F6F6" },
     100: { value: "#F5F5F5" },
     200: { value: "#F2F2F2" },
@@ -18,5 +19,8 @@ export const colors = {
   blue: {
     200: { value: "#55B1F3" },
     700: { value: "#022AFD" }
+  },
+  text: {
+    muted: { value: "#6b7280" }
   }
 };

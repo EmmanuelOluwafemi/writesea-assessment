@@ -31,4 +31,7 @@ export const sizes = {
     lg: { value: "1024px" },
     xl: { value: "1280px" },
   },
+  "27": { value: "27px" },
+  "29": { value: "29px" },
+  "102": { value: "102px" },
 };

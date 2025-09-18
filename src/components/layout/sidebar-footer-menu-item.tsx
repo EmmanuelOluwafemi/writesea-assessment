@@ -1,0 +1,45 @@
+import type { IconComponent } from "@/types/icon";
+import { Box, HStack, Text } from "@chakra-ui/react";
+import { Link } from "react-router";
+
+interface SidebarMenuItemProps {
+  name: string;
+  href: string;
+  icon: IconComponent;
+}
+
+export const SidebarFooterMenuItem = ({
+  name,
+  href,
+  icon,
+}: SidebarMenuItemProps) => {
+  const Icon = icon;
+
+  //   TODO: Fix this ui issue
+  return (
+    <Link style={{ width: "100%" }} to={href} role="group">
+      <HStack
+        w="full"
+        alignItems="center"
+        justifyContent="flex-start"
+        gap="2"
+        p="1.5"
+        rounded="md"
+      >
+        <Box h="6" w="0.5" rounded="sm" />
+        <Box color="gray.500" _groupHover={{ color: "black" }}>
+          <Icon />
+        </Box>
+        <Text
+          as="p"
+          fontSize="sm"
+          fontWeight="medium"
+          color="gray.500"
+          _groupHover={{ color: "black" }}
+        >
+          {name}
+        </Text>
+      </HStack>
+    </Link>
+  );
+};

@@ -4,6 +4,7 @@ import { tokens } from "./tokens"
 import { semanticTokens } from "./semantic-tokens"
 import { foundations } from "./foundations"
 import { styles } from "./styles"
+import { buttonRecipe } from "./recipe/button"
 
 const customConfig = defineConfig({
   cssVarsPrefix: "ck",
@@ -16,9 +17,10 @@ const customConfig = defineConfig({
     semanticTokens,
     textStyles: styles.textStyles,
     layerStyles: styles.layerStyles,
+    slotRecipes: {
+      button: buttonRecipe
+    }
   },
-
-  strictTokens: true, // Enforce design tokens usage
 })
 
 export const system = createSystem(defaultConfig, customConfig)

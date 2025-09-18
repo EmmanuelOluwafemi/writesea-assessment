@@ -1,0 +1,56 @@
+import type { IconComponent } from "@/types/icon";
+import { Box, HStack, Text } from "@chakra-ui/react";
+import { useMemo } from "react";
+import { Link, useLocation } from "react-router";
+
+interface SidebarMenuItemProps {
+  name: string;
+  href: string;
+  icon: IconComponent;
+}
+
+export const SidebarMenuItem = ({ name, href, icon }: SidebarMenuItemProps) => {
+  const location = useLocation();
+  const Icon = icon;
+
+  const isCurrentPage = useMemo(() => {
+    return location.pathname.includes(href);
+  }, [location, href]);
+
+//   TODO: Fix this ui issue
+  return (
+    <Link style={{ width: "100%" }} to={href}>
+      <HStack
+        w="full"
+        alignItems="center"
+        justifyContent="flex-start"
+        gap="2"
+        bgColor={isCurrentPage ? "primary.100" : "transparent"}
+        p="1.5"
+        rounded="md"
+        role="group"
+        _hover={{
+            bgColor: "primary.100"
+        }}
+      >
+        <Box
+          h="6"
+          w="0.5"
+          bgColor={isCurrentPage ? "primary.700" : "transparent"}
+          rounded="sm"
+        />
+        <Box color={isCurrentPage ? "primary.700" : "black"}>
+          <Icon />
+        </Box>
+        <Text
+          as="p"
+          fontSize="sm"
+          fontWeight="medium"
+          color={isCurrentPage ? "primary.700" : "black"}
+        >
+          {name}
+        </Text>
+      </HStack>
+    </Link>
+  );
+};
