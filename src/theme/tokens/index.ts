@@ -2,6 +2,7 @@ import { colors } from "./colors"
 import { fonts, fontSizes, fontWeights, lineHeights } from "./typography"
 import { spacing, sizes } from "./spacing"
 import { radii } from "./radii"
+import { shadows } from "./shadows"
 
 export const tokens = {
   colors,
@@ -12,4 +13,5 @@ export const tokens = {
   spacing,
   sizes,
   radii,
+  shadows
 }

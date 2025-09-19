@@ -8,6 +8,10 @@ interface OverviewMenuListProps {
   items: {
     title: string;
     link: string;
+    children: {
+      title: string;
+      link: string;
+    }[];
   }[];
 }
 
@@ -34,6 +38,7 @@ export const OverviewMenuList = (props: OverviewMenuListProps) => {
             key={item.title}
             href={item.link}
             title={item.title}
+            children={item.children}
           />
         ))}
       </VStack>

@@ -1,12 +1,17 @@
 import { GradeIcon } from "@/components/icons/grade";
 import { ListIcon } from "@/components/icons/list";
 import { AccordionCard } from "@/components/ui/accordion-card";
-import { Box, HStack, Text } from "@chakra-ui/react";
+import { Box, HStack, Stack, Text } from "@chakra-ui/react";
 
 export const SummaryCard = () => {
   return (
-    <AccordionCard title="Summary" icon={<ListIcon color="black" />}>
-      <HStack w="full" pos="relative" py="6">
+    <AccordionCard title="Summary" icon={<ListIcon color="black" />} isClosable>
+      <Stack
+        direction={{ base: "column", md: "row" }}
+        w="full"
+        pos="relative"
+        py="6"
+      >
         <Box
           pos="absolute"
           top="0"
@@ -17,12 +22,22 @@ export const SummaryCard = () => {
           opacity="0.5"
           rounded="lg"
         />
-        <Box pos="relative" borderRight="xs" borderRightColor="gray.300" pr="2">
+        <Box
+          pos="relative"
+          borderRight="xs"
+          borderRightColor={{ base: "transparent", md: "gray.300" }}
+          pr="2"
+        >
           <GradeIcon />
         </Box>
 
-        <HStack pos="relative" alignItems="center" px="7">
-          <Text fontSize="md" fontWeight="medium" color="black">
+        <HStack pos="relative" alignItems="center" px={{ base: "4", md: "7" }}>
+          <Text
+            fontSize={{ base: "sm", md: "md" }}
+            fontWeight="medium"
+            color="black"
+            lineHeight={{ base: "relaxed" }}
+          >
             Strong professional presence with detailed work experience and
             networking indicators. The profile would benefit from a more
             personalized summary and stronger proof through recommendations and
@@ -30,7 +45,7 @@ export const SummaryCard = () => {
             recruiters.
           </Text>
         </HStack>
-      </HStack>
+      </Stack>
     </AccordionCard>
   );
 };

@@ -14,10 +14,14 @@ export const SidebarMenuItem = ({ name, href, icon }: SidebarMenuItemProps) => {
   const Icon = icon;
 
   const isCurrentPage = useMemo(() => {
-    return location.pathname.includes(href);
-  }, [location, href]);
+    if (href === "/") {
+      // home should only be active on exact "/"
+      return location.pathname === "/";
+    }
+    // for nested routes like /blog and /blog/new
+    return location.pathname.startsWith(href);
+  }, [location.pathname, href]);
 
-//   TODO: Fix this ui issue
   return (
     <Link style={{ width: "100%" }} to={href}>
       <HStack
@@ -30,7 +34,7 @@ export const SidebarMenuItem = ({ name, href, icon }: SidebarMenuItemProps) => {
         rounded="md"
         role="group"
         _hover={{
-            bgColor: "primary.100"
+          bgColor: "primary.100",
         }}
       >
         <Box

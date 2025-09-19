@@ -19,7 +19,7 @@ export const WorkExperienceCard = () => {
         px="2"
         rounded="full"
       >
-        <Text color="gray.600" fontSize="sm">
+        <Text color="gray.600" fontWeight="medium" fontSize="sm">
           <Highlight
             query="Google"
             styles={{ fontWeight: "semibold", color: "black" }}
@@ -43,7 +43,7 @@ export const WorkExperienceCard = () => {
             borderLeftColor="gray.300"
             borderBottomLeftRadius="lg"
         />
-        <Text color="black" fontSize="sm">
+        <Text color="black" fontWeight="medium" fontSize="sm">
           <Highlight
             query={["company", "location", "skills", "role", "description"]}
             styles={{ color: "red.500" }}

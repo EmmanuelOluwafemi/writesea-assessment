@@ -33,7 +33,7 @@ export const buttonRecipe = defineSlotRecipe({
         icon: { boxSize: "4", pl: "2" },
       },
       md: {
-        root: { px: "4", h: "10", textStyle: "md" },
+        root: { px: "4", h: "8", textStyle: "md", rounded: "md" },
         icon: { boxSize: "5" },
       },
       lg: {
@@ -66,6 +66,14 @@ export const buttonRecipe = defineSlotRecipe({
           color: "blue.400",
           border: "xs",
           borderColor: "blue.400",
+        }
+      },
+      grayOutline: {
+        root: {
+          bg: "transparent",
+          color: "black",
+          border: "xs",
+          borderColor: "gray.300",
         }
       },
       ghost: {

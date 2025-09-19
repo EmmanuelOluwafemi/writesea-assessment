@@ -1,7 +1,9 @@
 import { StarIcon } from "@/components/icons/star";
 import { recommendedConnects } from "@/constants/recommended-connect";
-import { Box, Text, VStack } from "@chakra-ui/react";
+import { Box, Icon, Text, VStack } from "@chakra-ui/react";
 import { RecommendationCard } from "./recommendation-card";
+import { Button } from "@/components/ui/button";
+import { ChevronRightIcon } from "@/components/icons/chevron-right";
 
 export const RecommendedConnect = () => {
   return (
@@ -36,6 +38,10 @@ export const RecommendedConnect = () => {
             id={id}
           />
         ))}
+
+        <Box w="full">
+          <Button variant="grayOutline" size="sm" rightIcon={<Icon as={ChevronRightIcon} />}>Show all 18</Button>
+        </Box>
       </VStack>
     </Box>
   );

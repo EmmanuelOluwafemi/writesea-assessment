@@ -1,27 +1,29 @@
-import { Box, HStack, Text, VStack } from "@chakra-ui/react";
+import { QuestionIcon } from "@/components/icons/question";
+import { Tooltip } from "@/components/ui/tooltip";
+import { Box, HStack, Stack, Text } from "@chakra-ui/react";
 
 const proposedBreakdowns = [
-    {
-        title: "Product Designer",
-        percentage: 60,
-        color: "purple.500"
-    },
-    {
-        title: "Founders",
-        percentage: 20,
-        color: "orange.500"
-    },
-    {
-        title: "Creators",
-        percentage: 10,
-        color: "blue.600"
-    },
-    {
-        title: "Others",
-        percentage: 10,
-        color: "skyblue.500"
-    }
-]
+  {
+    title: "Product Designer",
+    percentage: 60,
+    color: "purple.500",
+  },
+  {
+    title: "Founders",
+    percentage: 20,
+    color: "orange.500",
+  },
+  {
+    title: "Creators",
+    percentage: 10,
+    color: "blue.600",
+  },
+  {
+    title: "Others",
+    percentage: 10,
+    color: "skyblue.500",
+  },
+];
 
 export const ProposedNetworkBreakdown = () => {
   return (
@@ -33,35 +35,60 @@ export const ProposedNetworkBreakdown = () => {
       rounded="lg"
       bgColor="white"
     >
-      <Box
-        as="span"
-        display="inline-block"
-        border="xs"
-        borderColor="gray.300"
-        p="1"
-        px="2"
-        rounded="full"
+      <Tooltip content="See a detailed breakdown of your LinkedIn network by field.">
+        <Box
+          as="span"
+          display="inline-flex"
+          border="xs"
+          borderColor="gray.300"
+          p="1"
+          px="2"
+          rounded="full"
+          alignItems="center"
+          gap="1"
+        >
+          <Text color="black" fontSize="sm" fontWeight="medium">
+            Proposed Network Breakdown
+          </Text>
+          <QuestionIcon />
+        </Box>
+      </Tooltip>
+
+      <Stack
+        direction={{ base: "column", md: "row" }}
+        w="full"
+        pt="3"
+        gap="0.5"
       >
-        <Text color="black" fontSize="sm" fontWeight="medium">
-          Proposed Network Breakdown
-        </Text>
-      </Box>
+        {proposedBreakdowns.map((breakdown) => (
+          <Stack
+            direction={{ base: "row", md: "column" }}
+            w={{ base: "full", md: `${breakdown.percentage}%` }}
+          >
+            <Box
+              w={{base: `${breakdown.percentage}%`, md:"full"}}
+              maxW={{ base: "150px", md: "full" }}
+              height={{base: "2", md: "6"}}
+              order={{ base: "2", md: "1" }}
+              rounded="sm"
+              bgColor={breakdown.color}
+            />
 
-      <HStack w="full" pt="3" gap="0.5">
-        {
-            proposedBreakdowns.map((breakdown) => (
-                <VStack style={{ width: `${breakdown.percentage}%` }}>
-                    <Box w="full" height="6" rounded="sm" bgColor={breakdown.color} />
-
-                    <HStack w="full" justifyContent="flex-start" gap="1">
-                        <Box w="2" h="2" bgColor={breakdown.color} rounded="full" />
-                        <Text fontSize="xs" truncate>{breakdown.title} {"-"}</Text>
-                        <Text fontSize="xs">{breakdown.percentage + "%"}</Text>
-                    </HStack>
-                </VStack>
-            ))
-        }
-      </HStack>
+            <HStack
+              w="full"
+              order={{ base: "1", md: "2" }}
+              justifyContent="flex-start"
+              gap="1"
+            >
+              <Box w="2" h="2" bgColor={breakdown.color} rounded="full" />
+              <Text fontSize="xs" fontWeight="medium" truncate>
+                {breakdown.title} {"-"}
+              </Text>
+              <Text fontSize="xs">{breakdown.percentage + "%"}</Text>
+            </HStack>
+          </Stack>
+        ))}
+      </Stack>
     </Box>
   );
 };

@@ -5,7 +5,7 @@ import { DropdownIcon } from "../icons/dropdown";
 export const ProfileDropdown = () => {
   return (
     <Menu.Root>
-      <Menu.Trigger w="full" focusRing="outside">
+      <Menu.Trigger w="full" focusRing="none">
         <HStack w="full" borderTop="xs" cursor="button" borderTopColor="gray.300" pt="2">
           <AvatarWithText
             initial="MC"

@@ -9,7 +9,7 @@ export const Networking = () => {
       w="full"
       h="full"
       style={{ maxWidth: "849px" }}
-      gap="6"
+      gap="4"
     >
       <SummaryCard />
       <MissingSectionCard />

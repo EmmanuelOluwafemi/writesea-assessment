@@ -8,31 +8,55 @@ export const networkMenu = [
         items: [
             {
                 title: "Personal Details",
-                link: "/linkedin-analyzer/personal-details"
+                link: "/linkedin-analyzer/personal-details",
+                children: []
             },
             {
                 title: "Profile Section",
-                link: "/linkedin-analyzer/profile-section"
+                link: "/linkedin-analyzer/profile-section",
+                children: [
+                    {
+                        title: "Headline",
+                        link: "/linkedin-analyzer/profile-section/headline"
+                    },
+                    {
+                        title: "About / Summary",
+                        link: "/linkedin-analyzer/profile-section/about"
+                    },
+                    {
+                        title: "Current Position",
+                        link: "/linkedin-analyzer/profile-section/current-position"
+                    },
+                    {
+                        title: "Top Skills",
+                        link: "/linkedin-analyzer/profile-section/top-skills"
+                    },
+                ]
             },
             {
                 title: "Work Experience",
-                link: "/linkedin-analyzer/work-experience"
+                link: "/linkedin-analyzer/work-experience",
+                children: []
             },
             {
                 title: "Skills",
-                link: "/linkedin-analyzer/skills"
+                link: "/linkedin-analyzer/skills",
+                children: []
             },
             {
                 title: "Recommendations",
-                link: "/linkedin-analyzer/recommendations"
+                link: "/linkedin-analyzer/recommendations",
+                children: []
             },
             {
                 title: "Education",
-                link: "/linkedin-analyzer/education"
+                link: "/linkedin-analyzer/education",
+                children: []
             },
             {
                 title: "Networking",
-                link: "/linkedin-analyzer/networking"
+                link: "/linkedin-analyzer/networking",
+                children: []
             },
         ]
     },
@@ -42,15 +66,18 @@ export const networkMenu = [
         items: [
             {
                 title: "Certifications",
-                link: "/linkedin-analyzer/certifications"
+                link: "/linkedin-analyzer/certifications",
+                children: []
             },
             {
                 title: "Projects",
-                link: "/linkedin-analyzer/projects"
+                link: "/linkedin-analyzer/projects",
+                children: []
             },
             {
                 title: "Volunteer Experience",
-                link: "/linkedin-analyzer/volunteer-experience"
+                link: "/linkedin-analyzer/volunteer-experience",
+                children: []
             }
         ]
     },
