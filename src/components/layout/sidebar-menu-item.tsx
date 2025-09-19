@@ -1,13 +1,7 @@
-import type { IconComponent } from "@/types/icon";
+import type { SidebarMenuItemProps } from "@/types";
 import { Box, HStack, Text } from "@chakra-ui/react";
 import { useMemo } from "react";
 import { Link, useLocation } from "react-router";
-
-interface SidebarMenuItemProps {
-  name: string;
-  href: string;
-  icon: IconComponent;
-}
 
 export const SidebarMenuItem = ({ name, href, icon }: SidebarMenuItemProps) => {
   const location = useLocation();

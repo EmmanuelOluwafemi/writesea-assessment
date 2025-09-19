@@ -1,12 +1,6 @@
-import type { IconComponent } from "@/types/icon";
+import type { SidebarMenuItemProps } from "@/types";
 import { Box, HStack, Text } from "@chakra-ui/react";
 import { Link } from "react-router";
-
-interface SidebarMenuItemProps {
-  name: string;
-  href: string;
-  icon: IconComponent;
-}
 
 export const SidebarFooterMenuItem = ({
   name,
@@ -15,7 +9,6 @@ export const SidebarFooterMenuItem = ({
 }: SidebarMenuItemProps) => {
   const Icon = icon;
 
-  //   TODO: Fix this ui issue
   return (
     <Link style={{ width: "100%" }} to={href} role="group">
       <HStack

@@ -52,7 +52,7 @@ export const AnalyzerWrapper = () => {
           h={contentHeight}
           w="full" 
           overflowY="auto"
-          flex={1}  // Take remaining space
+          flex={1}
           gap={4}
         >
           <Outlet />

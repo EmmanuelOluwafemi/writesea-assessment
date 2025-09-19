@@ -1,10 +1,7 @@
 import { Heading, Text, VStack } from "@chakra-ui/react";
 import { Link } from "react-router";
 import { Button } from "../ui/button";
-
-interface NotFoundProps {
-  scope?: "layout" | "linkedin";
-}
+import type { NotFoundProps } from "@/types";
 
 export const NotFound = ({ scope = "layout" }: NotFoundProps) => {
   if (scope === "linkedin") {

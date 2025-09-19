@@ -1,11 +1,5 @@
-import { Center, Heading, HStack, type BoxProps } from "@chakra-ui/react"
-
-interface AvatarWithTextProps {
-  initial: string
-  name: string
-  bg: BoxProps["bg"]
-  initialColor: BoxProps["color"]
-}
+import type { AvatarWithTextProps } from "@/types"
+import { Center, Heading, HStack } from "@chakra-ui/react"
 
 export const AvatarWithText = ({ initial, name, bg, initialColor }: AvatarWithTextProps) => {
   return (

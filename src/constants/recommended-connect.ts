@@ -1,10 +1,4 @@
-export interface RecommendedConnect {
-    name: string;
-    bio: string;
-    moreInfo: string;
-    imageUrl: string;
-    id: number;
-}
+import type { RecommendedConnect } from "@/types";
 
 export const recommendedConnects: RecommendedConnect[] = [
     {

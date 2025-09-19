@@ -1,6 +1,6 @@
 import React from "react";
 
-type IconProps = React.SVGProps<SVGSVGElement>;
+import type { IconProps } from "@/types";
 
 export const JobIcon: React.FC<IconProps> = (props) => {
   return (

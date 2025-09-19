@@ -1,18 +1,7 @@
-import { Box, Heading, HStack, Text, type BoxProps } from "@chakra-ui/react";
+import { Box, Heading, HStack, Text } from "@chakra-ui/react";
 import { ChevronFillIcon } from "../icons/chevron-fill";
-import { useState, useRef, useEffect, type PropsWithChildren } from "react";
-import type React from "react";
-
-interface AccordionCardProps extends PropsWithChildren {
-  title: string;
-  icon: React.ReactNode;
-  count?: number;
-  bg?: BoxProps["bgColor"];
-  badgeBg?: BoxProps["bgColor"];
-  isClosable?: boolean;
-  defaultOpen?: boolean;
-  animationDuration?: number;
-}
+import { useState, useRef, useEffect } from "react";
+import type { AccordionCardProps } from "@/types";
 
 export const AccordionCard = ({
   children,

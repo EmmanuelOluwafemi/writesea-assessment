@@ -1,19 +1,6 @@
-import type { IconComponent } from "@/types/icon";
 import { Heading, HStack, VStack } from "@chakra-ui/react";
 import { OverviewMenuItem } from "./overview-menu-item";
-
-interface OverviewMenuListProps {
-  title: string;
-  icon: IconComponent;
-  items: {
-    title: string;
-    link: string;
-    children: {
-      title: string;
-      link: string;
-    }[];
-  }[];
-}
+import type { OverviewMenuListProps } from "@/types";
 
 export const OverviewMenuList = (props: OverviewMenuListProps) => {
   const { title, icon, items } = props;
@@ -36,7 +23,7 @@ export const OverviewMenuList = (props: OverviewMenuListProps) => {
         {items.map((item) => (
           <OverviewMenuItem
             key={item.title}
-            href={item.link}
+            link={item.link}
             title={item.title}
             children={item.children}
           />

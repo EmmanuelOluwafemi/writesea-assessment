@@ -1,4 +1,4 @@
-type IconProps = React.SVGProps<SVGSVGElement>;
+import type { IconProps } from "@/types";
 
 export const DropdownIcon = (props: IconProps) => (
   <svg viewBox="0 0 18 19" width="24" height="24" fill="none" {...props}>
