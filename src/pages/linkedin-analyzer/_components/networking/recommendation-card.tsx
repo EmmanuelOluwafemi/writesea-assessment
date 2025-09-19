@@ -1,6 +1,6 @@
 import { LinkIcon } from "@/components/icons/link";
 import { Button } from "@/components/ui/button";
-import type { RecommendedConnect } from "@/constants/recommended-connect";
+import type { RecommendedConnect } from "@/types";
 import { Checkbox, Heading, HStack, Icon, Image, Stack, Text, VStack } from "@chakra-ui/react";
 
 export const RecommendationCard = (props: RecommendedConnect) => {
