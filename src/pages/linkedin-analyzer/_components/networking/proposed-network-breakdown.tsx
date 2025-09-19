@@ -86,7 +86,7 @@ export const ProposedNetworkBreakdown = () => {
               <Text fontSize={{ base: "sm", md:"xs"}} fontWeight="medium" truncate>
                 {breakdown.title} {"-"}
               </Text>
-              <Text fontSize="xs">{breakdown.percentage + "%"}</Text>
+              <Text fontSize={{ base: "sm", md:"xs"}} fontWeight="medium">{breakdown.percentage + "%"}</Text>
             </HStack>
           </Stack>
         ))}
