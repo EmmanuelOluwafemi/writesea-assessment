@@ -6,7 +6,7 @@ export interface SidebarMenuItemProps {
   name: string;
   href: string;
   icon: IconComponent;
-  onClose: () => void;
+  onClose?: () => void;
 }
 
 export interface NotFoundProps {
