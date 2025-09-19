@@ -1,21 +1,22 @@
 import type { AvatarWithTextProps } from "@/types"
-import { Center, Heading, HStack } from "@chakra-ui/react"
+import { Center, HStack, Text } from "@chakra-ui/react"
 
 export const AvatarWithText = ({ initial, name, bg, initialColor }: AvatarWithTextProps) => {
   return (
     <HStack w="full" gap="2" alignItems="center" py="1">
       <Center bg={bg} w="8" h="8" rounded="md">
-        <Heading fontSize="md" color={initialColor}>
+        <Text fontSize="md" color={initialColor}>
           {initial}
-        </Heading>
+        </Text>
       </Center>
-      <Heading
+      <Text
         fontSize="sm"
-        fontWeight="normal"
+        fontWeight="medium"
+        maxW={{ base: "24" }}
         truncate
       >
         {name}
-      </Heading>
+      </Text>
     </HStack>
   )
 }

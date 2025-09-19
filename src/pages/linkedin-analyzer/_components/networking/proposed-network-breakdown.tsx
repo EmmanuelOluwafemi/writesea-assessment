@@ -64,6 +64,7 @@ export const ProposedNetworkBreakdown = () => {
           <Stack
             direction={{ base: "row", md: "column" }}
             w={{ base: "full", md: `${breakdown.percentage}%` }}
+            alignItems={{ base: "center" }}
           >
             <Box
               w={{base: `${breakdown.percentage}%`, md:"full"}}
@@ -80,8 +81,8 @@ export const ProposedNetworkBreakdown = () => {
               justifyContent="flex-start"
               gap="1"
             >
-              <Box w="2" h="2" bgColor={breakdown.color} rounded="full" />
-              <Text fontSize="xs" fontWeight="medium" truncate>
+              <Box w="2" h="2" flexShrink={0} bgColor={breakdown.color} rounded="full" />
+              <Text fontSize={{ base: "sm", md:"xs"}} fontWeight="medium" truncate>
                 {breakdown.title} {"-"}
               </Text>
               <Text fontSize="xs">{breakdown.percentage + "%"}</Text>
