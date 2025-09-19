@@ -31,9 +31,9 @@ export const GradeIcon = (props: IconProps) => (
         width="112.596"
         height="115.095"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -67,8 +67,8 @@ export const GradeIcon = (props: IconProps) => (
         y2="18.7227"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#C0FFCF" />
-        <stop offset="1" stop-color="#09A2AD" />
+        <stop stopColor="#C0FFCF" />
+        <stop offset="1" stopColor="#09A2AD" />
       </linearGradient>
     </defs>
   </svg>

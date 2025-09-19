@@ -22,8 +22,8 @@ export const StarIcon = (props: IconProps) => (
         y2="16.3125"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#5215FF" />
-        <stop offset="1" stop-color="#55B1F3" />
+        <stop stopColor="#5215FF" />
+        <stop offset="1" stopColor="#55B1F3" />
       </linearGradient>
     </defs>
   </svg>

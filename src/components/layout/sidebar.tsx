@@ -10,10 +10,11 @@ import { SidebarHeader } from "./sidebar-header";
 import { SidebarMenu } from "./sidebar-menu";
 import { SidebarFooter } from "./sidebar-footer";
 import { MenuIcon } from "../icons/menu";
+import { useDisclosure } from "@chakra-ui/react";
 
 export const Sidebar = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
-  // const { open, onOpen, onClose } = useDisclosure();
+  const { open, onOpen, onClose } = useDisclosure();
 
   const SidebarContent = useMemo(() => (
     <VStack
@@ -26,16 +27,16 @@ export const Sidebar = () => {
     >
       <VStack w="full" gap="6">
         <SidebarHeader />
-        <SidebarMenu />
+        <SidebarMenu onClose={onClose} />
       </VStack>
       <SidebarFooter />
     </VStack>
-  ), []);
+  ), [onClose]);
 
   if (isMobile) {
     return (
       <>
-        <Drawer.Root>
+        <Drawer.Root open={open} onOpenChange={onOpen}>
           <Drawer.Backdrop />
           <Drawer.Trigger pos="fixed" top="7" left="6" zIndex="overlay">
             <Center>

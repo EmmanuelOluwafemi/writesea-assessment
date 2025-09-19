@@ -35,6 +35,7 @@ export const MissingSectionCard = () => {
               rounded="full"
               px="6"
               py="1"
+              key={section}
             >
               <Text fontSize="sm" fontWeight="medium">{section}</Text>
             </Box>

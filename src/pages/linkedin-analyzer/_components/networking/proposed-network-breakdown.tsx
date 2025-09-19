@@ -66,6 +66,7 @@ export const ProposedNetworkBreakdown = () => {
             w={{ base: "full", md: `${breakdown.percentage}%` }}
             minW={{ base: "auto", md: "80px", xl: index === 1 ? "180px" : "100px" }}
             alignItems={{ base: "center" }}
+            key={breakdown.title}
           >
             <Box
               w={{base: `${breakdown.percentage}%`, md:"full"}}

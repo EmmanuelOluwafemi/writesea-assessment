@@ -3,7 +3,7 @@ import { Box, HStack, Text } from "@chakra-ui/react";
 import { useMemo } from "react";
 import { Link, useLocation } from "react-router";
 
-export const SidebarMenuItem = ({ name, href, icon }: SidebarMenuItemProps) => {
+export const SidebarMenuItem = ({ name, href, icon, onClose }: SidebarMenuItemProps) => {
   const location = useLocation();
   const Icon = icon;
 
@@ -17,7 +17,7 @@ export const SidebarMenuItem = ({ name, href, icon }: SidebarMenuItemProps) => {
   }, [location.pathname, href]);
 
   return (
-    <Link style={{ width: "100%" }} to={href}>
+    <Link style={{ width: "100%" }} to={href} onClick={onClose}>
       <HStack
         w="full"
         alignItems="center"
