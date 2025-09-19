@@ -23,7 +23,7 @@ export const RecommendationCard = (props: RecommendedConnect) => {
 
       <Stack direction={{ base: "column", md: "row" }} w="full" alignItems="flex-start">
         <Stack direction={{ base: "column", md: "row" }} w="full" alignItems="flex-start">
-            <Image src={imageUrl} w="11" h="11" />
+            <Image src={imageUrl} w="11" h="11" alt="avatar" />
 
             <VStack w="full" alignItems="flex-start" gap="0">
                 <Heading fontSize="md" fontWeight="semibold" color="black">{name}</Heading>
