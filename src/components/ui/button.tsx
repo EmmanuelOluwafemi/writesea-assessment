@@ -1,6 +1,7 @@
 import { buttonRecipe } from "@/theme/recipe/button"
 import { chakra, useSlotRecipe } from "@chakra-ui/react"
 import type { ReactNode } from "react"
+import { useMemo } from "react"
 
 interface CustomButtonProps {
   children: ReactNode
@@ -23,7 +24,7 @@ export const Button = ({
   ...rest
 }: CustomButtonProps) => {
   const recipe = useSlotRecipe({ recipe: buttonRecipe })
-  const styles = recipe({ size, variant })
+  const styles = useMemo(() => recipe({ size, variant }), [recipe, size, variant])
 
   return (
     <chakra.button css={styles.root} flex={flex} textWrap={textWrap} {...rest}>

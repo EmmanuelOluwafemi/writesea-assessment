@@ -5,6 +5,7 @@ import {
   Drawer,
   Center,
 } from "@chakra-ui/react";
+import { useMemo } from "react";
 import { SidebarHeader } from "./sidebar-header";
 import { SidebarMenu } from "./sidebar-menu";
 import { SidebarFooter } from "./sidebar-footer";
@@ -14,7 +15,7 @@ export const Sidebar = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
   // const { open, onOpen, onClose } = useDisclosure();
 
-  const SidebarContent = (
+  const SidebarContent = useMemo(() => (
     <VStack
       w="full"
       h="full"
@@ -29,7 +30,7 @@ export const Sidebar = () => {
       </VStack>
       <SidebarFooter />
     </VStack>
-  );
+  ), []);
 
   if (isMobile) {
     return (

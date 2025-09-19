@@ -63,7 +63,7 @@ export const textStyles = {
     value: {
       fontFamily: "body",
       fontWeight: "semibold",
-      fontSize: {base: "xs", sm: "sm"},
+      fontSize: {base: "sm", sm: "sm"},
       lineHeight: "normal",
     },
   },

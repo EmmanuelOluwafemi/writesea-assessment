@@ -1,6 +1,6 @@
 import { Box, Heading, HStack, Text } from "@chakra-ui/react";
 import { ChevronFillIcon } from "../icons/chevron-fill";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import type { AccordionCardProps } from "@/types";
 
 export const AccordionCard = ({
@@ -37,10 +37,17 @@ export const AccordionCard = ({
     }
   }, [isOpen, animationDuration]);
 
-  const handleToggle = () => {
+  const handleToggle = useCallback(() => {
     if (!isClosable) return;
     setIsOpen((prev) => !prev);
-  };
+  }, [isClosable]);
+
+  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (isClosable && (e.key === "Enter" || e.key === " ")) {
+      e.preventDefault();
+      handleToggle();
+    }
+  }, [isClosable, handleToggle]);
 
   return (
     <Box
@@ -57,12 +64,7 @@ export const AccordionCard = ({
         cursor={isClosable ? "pointer" : "default"}
         role={isClosable ? "button" : undefined}
         tabIndex={isClosable ? 0 : undefined}
-        onKeyDown={(e) => {
-          if (isClosable && (e.key === "Enter" || e.key === " ")) {
-            e.preventDefault();
-            handleToggle();
-          }
-        }}
+        onKeyDown={handleKeyDown}
         _hover={isClosable ? { opacity: 0.8 } : undefined}
         transition="opacity 0.2s ease-in-out"
       >
