@@ -60,10 +60,11 @@ export const ProposedNetworkBreakdown = () => {
         pt="3"
         gap="0.5"
       >
-        {proposedBreakdowns.map((breakdown) => (
+        {proposedBreakdowns.map((breakdown, index) => (
           <Stack
             direction={{ base: "row", md: "column" }}
             w={{ base: "full", md: `${breakdown.percentage}%` }}
+            minW={{ base: "auto", md: "80px", xl: index === 1 ? "180px" : "100px" }}
             alignItems={{ base: "center" }}
           >
             <Box

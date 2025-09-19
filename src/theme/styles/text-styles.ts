@@ -44,7 +44,7 @@ export const textStyles = {
     description: "Body LG text style",
     value: {
       fontFamily: "body",
-      fontWeight: "normal",
+      fontWeight: "medium",
       fontSize: "lg",
       lineHeight: "relaxed",
     },
@@ -53,8 +53,17 @@ export const textStyles = {
     description: "Body MD text style",
     value: {
       fontFamily: "body",
-      fontWeight: "normal",
+      fontWeight: "medium",
       fontSize: "md",
+      lineHeight: "normal",
+    },
+  },
+  "body.sm.semibold": {
+    description: "Body SM Semibold text style",
+    value: {
+      fontFamily: "body",
+      fontWeight: "semibold",
+      fontSize: {base: "xs", sm: "sm"},
       lineHeight: "normal",
     },
   },
@@ -62,7 +71,7 @@ export const textStyles = {
     description: "Body SM text style",
     value: {
       fontFamily: "body",
-      fontWeight: "normal",
+      fontWeight: "medium",
       fontSize: "sm",
       lineHeight: "normal",
     },

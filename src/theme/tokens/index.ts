@@ -13,5 +13,5 @@ export const tokens = {
   spacing,
   sizes,
   radii,
-  shadows
+  shadows,
 }

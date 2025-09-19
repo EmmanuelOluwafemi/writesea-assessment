@@ -25,8 +25,7 @@ export const SidebarFooterMenuItem = ({
         </Box>
         <Text
           as="p"
-          fontSize="sm"
-          fontWeight="medium"
+          textStyle="body.sm"
           color="gray.500"
           _groupHover={{ color: "black" }}
         >

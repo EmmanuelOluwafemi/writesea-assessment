@@ -83,8 +83,8 @@ export const checkboxRecipe = defineSlotRecipe({
     color: {
       primary: {
         control: {
-          "&[data-checked]": { bg: "primary.700", borderColor: "primary.700" },
-          _checked: { bg: "primary.700", borderColor: "primary.700" },
+          "&[data-checked]": { bg: "primary.700", borderColor: "primary.700", color: "white" },
+          _checked: { bg: "primary.700", borderColor: "primary.700", color: "white" },
         },
       },
     },

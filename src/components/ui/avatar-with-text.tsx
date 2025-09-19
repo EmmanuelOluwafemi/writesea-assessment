@@ -10,8 +10,7 @@ export const AvatarWithText = ({ initial, name, bg, initialColor }: AvatarWithTe
         </Text>
       </Center>
       <Text
-        fontSize="sm"
-        fontWeight="medium"
+        textStyle="body.sm"
         maxW={{ base: "24" }}
         truncate
       >

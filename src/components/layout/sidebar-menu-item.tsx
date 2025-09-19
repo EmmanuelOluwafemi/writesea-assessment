@@ -42,9 +42,8 @@ export const SidebarMenuItem = ({ name, href, icon }: SidebarMenuItemProps) => {
         </Box>
         <Text
           as="p"
-          fontSize="sm"
-          fontWeight="medium"
           color={isCurrentPage ? "primary.700" : "black"}
+          textStyle="body.sm"
         >
           {name}
         </Text>

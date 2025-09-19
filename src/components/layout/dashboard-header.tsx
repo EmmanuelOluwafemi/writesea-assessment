@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, Text, VStack } from "@chakra-ui/react";
+import { Box, HStack, Text, VStack } from "@chakra-ui/react";
 import { LinkedinFillIcon } from "../icons/linkedin-fill";
 import { Button } from "../ui/button";
 
@@ -21,10 +21,9 @@ export const DashboardHeader = () => {
           textAlign="left"
           pl={{ base: "10", md: "0" }}
         >
-          <Heading fontWeight="semibold" whiteSpace="nowrap" fontSize={{ base: "xs", sm: "sm" }}>
-
+          <Text textStyle="body.sm.semibold" whiteSpace="nowrap">
             Optimized Result for
-          </Heading>
+          </Text>
 
           <Box
             as="span"
@@ -40,7 +39,12 @@ export const DashboardHeader = () => {
             overflow="hidden"
           >
             <LinkedinFillIcon />
-            <Text fontSize={{ base: "xs", sm: "sm" }} whiteSpace="nowrap" truncate fontWeight="medium">
+            <Text
+              textStyle="body.sm.semibold"
+              whiteSpace="nowrap"
+              truncate
+              fontWeight="medium"
+            >
               linkedin.com/in/inioluwa-chris-271104/
             </Text>
           </Box>
